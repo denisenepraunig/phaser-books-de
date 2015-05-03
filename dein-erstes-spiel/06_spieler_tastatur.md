@@ -51,7 +51,7 @@ Die Sprite des Spielers bewegt sich nur wenn eine Pfeiltaste gedrückt wird und 
 
 Der letzte Teil des Codes ermöglicht uns das Springen. Wir prüfen ob die Nach-Oben-Pfeiltaste gedrückt wurde, sie ist die Taste welche wir für das Springen verwenden. Zusätzlich testen wir noch ob der Spieler gerade den Boden berührt, ansonsten könnte er auch springen wenn er sich gerade mitten in der Luft befindet. Wenn beide Bedingungen zutreffen wenden wir eine vertikale Beschleunigung von 350 Pixel / Sekunde an. Der Spieler wird auch automatisch fallen, da wir ihm auch eine Gravitation zugewiesen haben. Jetzt wo wir die Steuerung aufgesetzt haben kann man die Spielewelt auch erkunden. Starte `part7.html` und probiere es aus. Du mit dem 350-Wert herumspielen um höher oder niedriger zu hüpfen um zu sehen welchen Effekt das hat.
 
-![Spieler springt][img_game2]
+![Spieler springt][img_game]
 
 [twitter_me]: https://twitter.com/denisenepraunig
 [org_tutorial]: http://phaser.io/tutorials/making-your-first-phaser-game
