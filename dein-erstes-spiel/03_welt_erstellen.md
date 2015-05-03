@@ -1,4 +1,4 @@
-# Teil 2 - Assets laden
+# Teil 3 - Welt erstellen
 
 > Dieses Tutorial wurde aus dem Englischen von Denise Nepraunig [@denisenepraunig][twitter_me] übersetzt. Das [originale Tutorial][org_tutorial] stammt von [Alvin Ourrad and Richard Davey][authors] und ist vom 7. Dezember 2013 [@photonstorm][authors]
 
