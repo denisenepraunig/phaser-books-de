@@ -2,7 +2,7 @@
 
 > Dieses Tutorial wurde aus dem Englischen von Denise Nepraunig [@denisenepraunig][twitter_me] übersetzt. Das [originale Tutorial][org_tutorial] stammt von [Alvin Ourrad and Richard Davey][authors] und ist vom 7. Dezember 2013 [@photonstorm][authors]
 
-Kollisionen sind ja schön und gut, aber wir benötigen eine Möglichkeit den Spieler zu bewegen. Vielleicht denkst du jetzt daran direkt in die Dokumentation zu springen und nach so etwas wie dem Hinzufügen von Event Listeneres zu suchen, aber das ist nicht notwendig hier. Phaser hat einen eingebauten Tastatur-Manger und einer seiner Vorteile ist die Verwendung dieser kleinen, praktischen Funktion:
+Kollisionen sind ja schön und gut, aber wir benötigen eine Möglichkeit den Spieler zu bewegen. Vielleicht denkst du jetzt daran direkt in die Dokumentation zu springen und nach so etwas wie dem Hinzufügen von Event Listeners zu suchen, aber das ist nicht notwendig hier. Phaser hat einen eingebauten Tastatur-Manger und einer seiner Vorteile ist die Verwendung dieser kleinen, praktischen Funktion:
 
 ```javascript
 cursors = game.input.keyboard.createCursorKeys();
