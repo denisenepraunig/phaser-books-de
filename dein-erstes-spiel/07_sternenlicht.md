@@ -48,7 +48,7 @@ function collectStar (player, star) {
 }
 ```
 
-Ziemlich einfach, der Stern wird getötet und somit vom Bildschirm entfernt. Wenn wir das Spiel jetzt ausführen gibt uns jetzt einen Spieler der herumspringen, herumlaufen, abprallen und Sterne einsammeln kann. Nicht schlecht für ein paar Zeilen hoffentlich ziemlich leserlichen Code :-)
+Ziemlich einfach, der Stern wird getötet und somit vom Bildschirm entfernt. Wenn wir das Spiel jetzt ausführen haben wir jetzt einen Spieler der herumspringen, herumlaufen, abprallen und Sterne einsammeln kann. Nicht schlecht für ein paar Zeilen hoffentlich ziemlich leserlichen Code :-)
 
 ![Spieler springt mit Sterne][img_game]
 
