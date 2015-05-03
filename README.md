@@ -1,2 +1,2 @@
 # phaser-books-de
-Deutsche BÃ¼cher Ã¼ber das Spiele programmieren mit Phaser
+Deutsche Bücher über das Spiele programmieren mit Phaser
