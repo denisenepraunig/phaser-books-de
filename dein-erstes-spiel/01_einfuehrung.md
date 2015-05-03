@@ -1,5 +1,9 @@
 # Teil 1 - Einführung
 
+> Dieses Tutorial wurde aus dem Englischen von Denise Nepraunig [@denisenepraunig][twitter_me] übersetzt. Das [originale Tutorial][org_tutorial] stammt von [Alvin Ourrad and Richard Davey][authors] und ist vom 7. Dezember 2013 [@photonstorm][authors]
+
+![Unser erstes Spiel][img_game]
+
 Willkoemmen zu unserem ersten Tutorial über Spieleentwicklung mit Phaser. Hier werden wir lernen wi wir ein kleines Spiel erstelllen inklusive einem Spieler der herumrennt und auf Platformen springt und Sterne einfängt. Während wir diesen Prozess durchmachen werden wir einige Hauptfunktionen des Frameworks kennenlernen.
 
 ## Was ist Phaser
@@ -35,5 +39,9 @@ Die ersten zwei Parameter sind die Breite und die Höhe des Canvas Elements welc
 
 Der vierte Paramter ist ein leerer String, dies ist die ID des DOM Elements in welchem du gerne den Canvas einfügen würdest den Phaser erzeugt. Da wir ihn leer gelassen haben wird es einfach an den Body angehöngt. Der letzte Parameter ist ein Objekt, welches die Referenzen zu den essenziellen Phaser Funktionen beinhaltet. Ihre Verwendung wird gründlich erklärt werden. Beachte das dieses Objekt nicht zwingend notwendig ist - Phaser unterstützt ein vollkommenes State System mit welchen man den Code in sehr viel sauberere einzelne Objekte aufsplitten kann. Aber für einen einfachen Getting Started Guide wie hier werden wir diesen Ansatz verwenden da er uns sehr viel schnelleres Prototyping erlaubt.
 
+[twitter_me]: https://twitter.com/denisenepraunig
+[org_tutorial]: http://phaser.io/tutorials/making-your-first-phaser-game
+[authors]: https://twitter.com/photonstorm 
+[img_game]: http://phaser.io/content/tutorials/making-your-first-phaser-game/tutorial_header.png
 [sources]: https://github.com/photonstorm/phaser/raw/master/resources/tutorials/02%20Making%20your%20first%20game/phaser_tutorial_02.zip
 [getting_started]: http://phaser.io/tutorials/getting-started
