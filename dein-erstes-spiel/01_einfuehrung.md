@@ -10,13 +10,13 @@ Willkoemmen zu unserem ersten Tutorial über Spieleentwicklung mit Phaser. Hier 
 Phaser ist ein HTML5 Spiele-Framework welches das Ziel hat den Entwicklern zu helfen um mächtige, cross-browser HTML5 Spiele richtig schnell und, im Gegensatz zu anderen, wurde es einzig und allein darum gebaut um auch mit mobielen Browsern zu funktionieren. Die einzige Anforderung an den Browers ist der Support des Canvas Tags. Es leiht sich auch einiges von Flixel aus.
 
 ## Vorraussetzungen
-[Lade die Quellcode Dateien][sources] und die Ressourcen herunter die zu diesem Tutorial gehören. Wenn du bereits das Phaser Repository von Github ausgecheckt hast, dann hast du diese Daten bereits. Schau einfach in den resources/tutorials Ordner.
+[Lade die Quellcode Dateien][sources] und die Assets herunter die zu diesem Tutorial gehören. Wenn du bereits das Phaser Repository von Github ausgecheckt hast, dann hast du diese Daten bereits. Schau einfach in den resources/tutorials Ordner.
 
 Und du brauchst ein sehr, sehr grundlegendes Wissen über JavaScript.
 
 Stell auch sicher, dass du dir den [Getting Started Guide][getting_started] durchliest, er zeigt dir wie du das Framework runterlädst, eine lokale Entwicklungsumgebung aufsetzt und gibt dir einen flüchtigen Eindruck über ein Phaser Projekt und seine Hauptfunktionen.
 
-Wenn du durch den Getting Started Guide durch bist hast du Phaser heruntergeladen und alles ist eingerichtet und bereit fürs Programmieren. Lade die Ressourcen für dieses Tutorial herunter und entpacke sie in das Root-Verzeichnis deines Webservers.
+Wenn du durch den Getting Started Guide durch bist hast du Phaser heruntergeladen und alles ist eingerichtet und bereit fürs Programmieren. Lade die Assets für dieses Tutorial herunter und entpacke sie in das Root-Verzeichnis deines Webservers.
 
 Öffne die `part1.html` Seite in dem Editor deiner Wahl und lass uns einen genaueren Blick auf den Code werfen. Nach ein bisschen Boilerplate HTML, welches auch Phaser inkludiert, sieht die Codestruktur folgendermaßen aus:
 
