@@ -28,7 +28,7 @@ game.add.sprite(0, 0, 'star');
 
 Wenn du die Seite erneut im Browser lädst solltest du einen schwarzen Schirm mit einem einzigen Stern-Sprite in der linken, oberen Ecke sehen:
 
-![Unser erstes Spiel][img_game]
+![Stern-Sprite][img_game]
 
 Die Reihenfolge in der die einzelnen Objekte gerendert werden entsprechen der Reihenfolge in der du sie erstellst. Wenn du also einen Hintergrund hinter das Stern-Sprite haben willst musst du sicher stellen dass du es als Sprite vor dem Stern hinzufügst.
 
