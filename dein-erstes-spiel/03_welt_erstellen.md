@@ -4,7 +4,7 @@
 
 Unter der Haube erzeugt `game.add.sprite` ein neues Phaser.Sprite Objekt und fügt dieses Sprite der `Spielewelt` hinzu. Das ist die Welt wo alle deine Objekte existieren, und kann mit der Stage in ActionScript3 vergleichen werden.
 
-Hinweise: Die Spielewelt had keine fixe Größe und dehnt sich unendlich aus in alle Richtungen und `0, 0` ist ihr Mittelpunkt. Der Einfachheit halber platziert Phaser `0, 0` in der linken, oberen Ecke deines Spieles für dich, aber wenn due die eingebaunte Kamera verwendest, kannst du dich in der Welt bewegen wie du es brauchst.
+Hinweise: Die Spielewelt had keine fixe Größe und dehnt sich unendlich aus in alle Richtungen und `0, 0` ist ihr Mittelpunkt. Der Einfachheit halber platziert Phaser `0, 0` in der linken, oberen Ecke deines Spieles für dich, aber wenn du die eingebaunte Kamera verwendest, kannst du dich in der Welt bewegen wie du es brauchst.
 
 Auf die Welt-Klasse kann mittels `game.world` zugegriffen werden und sie enthält vielen nützliche Funktionen und Eigenschaften welche dir helfen die Objekte in deiner Welt zu verteilen. Das sind einfache Eigenschaften wie `game.world.height`, aber es gibt auf einige fortgeschrittenere welche wir in einem anderen Tutorial verwenden werden.
 
