@@ -2,7 +2,7 @@
 
 > Dieses Tutorial wurde aus dem Englischen von Denise Nepraunig [@denisenepraunig][twitter_me] übersetzt. Das [originale Tutorial][org_tutorial] stammt von [Alvin Ourrad and Richard Davey][authors] und ist vom 7. Dezember 2013 [@photonstorm][authors]
 
-Es wird Zeit unserem kleinen Spiel auch einen Zweck zu geben. Lass uns ein paar Sterne in die Szene streuen und erlauben wir dem Spieler diese einzusammeln. Um diese zu erreichen werden wir eine neue Gruppe gennannt `stars` erzeugen und in dieser Gruppe die Sterne hinzufügen. Ergänzen wir unsere `create` Funktion um folgenden Code (das siehst du auch in `part8.html`):
+Es wird Zeit unserem kleinen Spiel auch einen Zweck zu geben. Lass uns ein paar Sterne in die Szene streuen und erlauben wir dem Spieler diese einzusammeln. Um dies Umzusetzen werden wir eine neue Gruppe namens `stars` erzeugen und dieser Gruppe die Sterne hinzufügen. Ergänzen wir unsere `create` Funktion um folgenden Code (das siehst du auch in `part8.html`):
 
 ```javascript
 	stars = game.add.group();
@@ -23,9 +23,9 @@ Es wird Zeit unserem kleinen Spiel auch einen Zweck zu geben. Lass uns ein paar 
     }
 ```
 
-Der Prozess hier ist ganz ähnlich dem vorherigen, mit dem wir die Platfrom-Gruppe erzeugt haben. Mit dem JavaScript `for loop` sagen wir, dass wir gerne 12 Steren in unserem Spiel hätten. Diese haben eine x-Koordinate von `i * 70`, was bedeutet dass sie gleichmäßig in der Spieleszene verteilt sind mit jeweils 70 Pixel Abstand. Genauso wie dem Spieler geben wir ihnen eine Graviation, sodass sie nach unten fallen und etwas von den Platformen abprallen, wenn sie diese Treffen (Federkraft, bounce). 
+Der Prozess hier ist ganz ähnlich dem vorherigen mit dem wir die Platfrom-Gruppe erzeugt haben. Mit dem JavaScript `for loop` weisen wir an, dass wir gerne 12 Steren in unserem Spiel hätten. Diese haben eine x-Koordinate von `i * 70`, was bedeutet dass sie gleichmäßig in der Spieleszene verteilt sind mit jeweils 70 Pixel Abstand. Genauso wie dem Spieler geben wir ihnen eine Graviation, sodass sie nach unten fallen und etwas von den Platformen abprallen, wenn sie auf diese treffen (Federkraft, bounce). 
 
-Federkraft ist ein Wert zwischen 0 (keine Federung) und 1 (voll gefedert). Unsere Sterene werden mit einem Wert zwischen 0.7 und 0.9 abprallen. Wenn man den Code jetzt so ausführen würde, dann würden die Sterne durch die Platfromen und den Boden durchfallen. Um sie zu verhindern brauchen auch sie eine Kollisionsprüfung gegen die Platformen in unserer `update` Funktion:
+Federkraft ist ein Wert zwischen 0 (keine Federung) und 1 (voll gefedert). Unsere Sterene werden mit einem Wert zwischen 0.7 und 0.9 abprallen. Wenn man den Code jetzt so ausführen würde, dann würden die Sterne durch die Platfromen und den Boden durchfallen. Um dies zu verhindern brauchen auch sie eine Kollisionsprüfung gegen die Platformen in unserer `update` Funktion:
 
 ```javascript
 game.physics.arcade.collide(stars, platforms);
@@ -37,7 +37,7 @@ Zustätzlich müssen wir noch prüfen ob der Spieler einen Stern überlappt:
 game.physics.arcade.overlap(player, stars, collectStar, null, this);
 ```
 
-Diese Codezeile sagt Phaser, dass es die Überlappung zwischen dem Spieler und einem Stern der Sternengruppe überprüfen soll, damit wir einen Stern einsammeln können. Wenn sich die beiden überlappen, dann sollte die `collectStar` Funktion ausgeführt werden:
+Diese Codezeile sagt Phaser, dass es die Überlappung zwischen dem Spieler und einem Stern der Sternengruppe überprüfen soll, damit wir einen Stern auch einsammeln können. Wenn sich die beiden überlappen, dann sollte die `collectStar` Funktion ausgeführt werden:
 
 ```javascript
 function collectStar (player, star) {

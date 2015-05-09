@@ -2,11 +2,11 @@
 
 > Dieses Tutorial wurde aus dem Englischen von Denise Nepraunig [@denisenepraunig][twitter_me] übersetzt. Das [originale Tutorial][org_tutorial] stammt von [Alvin Ourrad and Richard Davey][authors] und ist vom 7. Dezember 2013 [@photonstorm][authors]
 
-Unter der Haube erzeugt `game.add.sprite` ein neues Phaser.Sprite-Objekt und fügt dieses Sprite der `Spielewelt` hinzu. Dies ist die Welt wo alle deine Objekte existieren und kann mit der Stage in ActionScript3 vergleichen werden.
+Unter der Haube erzeugt `game.add.sprite` ein neues `Phaser.Sprite-Objekt` und fügt dieses Sprite der `Spielewelt` hinzu. Die Spielewelt ist die Welt wo alle deine Objekte existieren und kann mit der `Stage` in ActionScript3 verglichen werden.
 
-Hinweise: Die Spielewelt had keine fixe Größe und dehnt sich unendlich aus in alle Richtungen und `0, 0` ist ihr Mittelpunkt. Der Einfachheit halber platziert Phaser `0, 0` in der linken, oberen Ecke deines Spieles für dich, aber wenn du die eingebaunte Kamera verwendest, kannst du dich in der Welt frei bewegen - so wie du es brauchst.
+Hinweis: Die Spielewelt hat keine fixe Größe und dehnt sich unendlich  in alle Richtungen aus. `0, 0` ist ihr Mittelpunkt. Der Einfachheit halber platziert Phaser `0, 0` in der linken, oberen Ecke deines Spieles für dich, aber wenn du die eingebaunte Kamera verwendest, kannst du dich in der Welt frei bewegen - so wie du es brauchst.
 
-Auf die Welt-Klasse kann mittels `game.world` zugegriffen werden und sie enthält vielen nützliche Funktionen und Eigenschaften - sie werden dir helfen die Objekte in deiner Welt zu verteilen. Es gibt einfache Eigenschaften wie `game.world.height`, aber es gibt auf einige fortgeschrittenere Dinge welche wir in einem anderen Tutorial verwenden werden.
+Auf die Spielewelt kann mittels `game.world` zugegriffen werden und sie enthält vielen nützliche Funktionen und Eigenschaften - sie werden dir helfen die Objekte in deiner Welt zu verteilen. Es gibt einfache Eigenschaften wie `game.world.height`, aber es gibt auf einige fortgeschrittenere Dinge welche wir in einem anderen Tutorial verwenden werden.
 
 Lass uns fürs Erste die Szene mit Hintergrund und Platformen aufbauen. Hier ist die aktualisierte `create` Funktion:
 
@@ -50,7 +50,7 @@ Wenn du das ausführst - du findest das in `part4.html` in der Tutorial Zip-Date
 
 ![Platformen][img_game_platform]
 
-Der erste Teil ist der gleiche Teil wie wir im Sternen-Sprite zuvor hatten, nur das wir den Schlüssel zu `sky` geändert haben und nun unseren Himmel-Hintergrund stattdessen anzeigen. Das ist eine 800 x 600 PNG-Datei die den ganzen Spieleschirm ausfüllt.
+Der erste Teil ist der selbe Teil wie wir ihn im Sternen-Sprite zuvor hatten, nur das wir den Schlüssel zu `sky` geändert haben und nun unseren Himmel-Hintergrund stattdessen anzeigen. Das ist eine 800 x 600 PNG-Datei die den ganzen Spieleschirm ausfüllt.
 
 [twitter_me]: https://twitter.com/denisenepraunig
 [org_tutorial]: http://phaser.io/tutorials/making-your-first-phaser-game

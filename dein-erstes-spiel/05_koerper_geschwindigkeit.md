@@ -2,9 +2,9 @@
 
 > Dieses Tutorial wurde aus dem Englischen von Denise Nepraunig [@denisenepraunig][twitter_me] übersetzt. Das [originale Tutorial][org_tutorial] stammt von [Alvin Ourrad and Richard Davey][authors] und ist vom 7. Dezember 2013 [@photonstorm][authors]
 
-Phaser bietet Unterstützung für eine Vielzahl von verschiedenen Physiksystemen. Es wird mit Arcade-Physik, Ninja-Physik und P2.JS Full-Body-Physik ausgeliefert. In diesem Tutorial verwenden wir das Arkade-Physik-System, welches einfach und leichtgewichtig ist - also optimal für mobile Browser. Du wirst merken, dass wir das Physiksystem manuell aktivieren müssen und dass wir es für jede Gruppe oder Sprite - wo wir physikalische Eigenschaften haben wollen - aktivieren müssen.
+Phaser bietet Unterstützung für eine Vielzahl von verschiedenen Physiksystemen. Es wird mit Arcade-Physik, Ninja-Physik und P2.JS Full-Body-Physik ausgeliefert. In diesem Tutorial verwenden wir das Arkade-Physik-System welches einfach und leichtgewichtig ist - also optimal für mobile Browser. Du wirst merken, dass wir das Physiksystem manuell aktivieren müssen und dass wir es für jede Gruppe oder Sprite - wo wir physikalische Eigenschaften haben wollen - ebenso aktivieren müssen.
 
-Sobald dies erledigt ist erhält das Sprite eine neue Körper-Eigenschaft (body), welche eine Instanz von `ArcadePhysics.Body` ist. Dies repräsentiert das Sprite als einen physikalischen Körper in Phaser's Arkade-Physik-System. Das Körperobjekt hat eine Menge an Eigenschaften mit welchen du herumspielen kannst. Um den Effekt von Anziehung auf ein Sprite zu simulieren braucht man nur die folgende Zeilen zu verwenden:
+Sobald dies erledigt ist, erhält das Sprite eine neue Körper-Eigenschaft (body), welche eine Instanz von `ArcadePhysics.Body` ist. Dies repräsentiert das Sprite als einen physikalischen Körper in Phaser's Arkade-Physik-System. Das Körperobjekt hat eine Menge an Eigenschaften mit welchen du herumspielen kannst. Um den Effekt von Anziehung auf ein Sprite zu simulieren braucht man nur die folgende Zeilen zu verwenden:
 
 ```javascript
 player.body.gravity.y = 300;
@@ -14,7 +14,7 @@ Dies ist ein beliebiger Wert, aber logischerweise, je höher der Wert, desto sch
 
 ![Vor dem Kollisionscheck][img_keine_bodenkollision]
 
-Der Grund dafür ist, dass wir aktuell noch nicht die Kollisionen zwischen dem Boden und dem Spieler überprüfen. Wir haben Phaser aber bereits angewiesen, dass sich unser Boden und die Plattformen nicht bewegen sollen (immovable). Hätten wir das nicht getan, würde wenn der Spieler mit ihnen kollidiert hätte alles zusammenfallen. Das liegt daran - wenn nicht anders eingestellt - dass der Boden ein bewegtes, physikalisches Objekt ist (auch genannt dynmischer Körper) und wenn der Spieler es berührt wird die resultierende Kraft der Kollision auf den Boden angewandt. Die beiden Körper tauschen ihre Beschleunigungen aus und der Boden fängt deshalb an zu fallen.
+Der Grund dafür ist, dass wir aktuell noch nicht die Kollisionen zwischen dem Boden und dem Spieler überprüfen. Wir haben Phaser aber bereits angewiesen, dass sich unser Boden und die Plattformen nicht bewegen sollen (immovable). Hätten wir das nicht getan, würde wenn der Spieler mit ihnen kollidiert hätte, alles zusammenfallen. Das liegt daran - wenn nicht anders eingestellt - dass der Boden ein bewegtes, physikalisches Objekt ist (auch genannt dynmischer Körper) und wenn der Spieler es berührt wird die resultierende Kraft der Kollision auf den Boden angewandt. Die beiden Körper tauschen ihre Beschleunigungen aus und der Boden würde deshalb deshalb anfangen an zu fallen.
 
 Um dem Spieler die Kollision zu ermöglichen und die physikalischen Eigenschaften zun unserem Vorteil zu nutzen, müssen wir einen Kollisionscheck in unsere `update` Funktion einbauen:
 

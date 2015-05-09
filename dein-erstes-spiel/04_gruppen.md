@@ -8,12 +8,12 @@ Gruppen sind richtig mächtig. Wie ihr Name impliziert erlauben sie dir ähnlich
 platforms = game.add.group();
 ```
 
-So wie bei den Sprites erzeugt `game.add.group()` unser Gruppenobjekt. Wir weisen es einer lokalen Variable `platforms` zu. Jetzt können wir ihr Objekte hinzufügen - als erstes den Boden. Der ist am Grund des Spiels platziert und verwendet das `ground` Bild welches wir vorher geladen haben. Der Boden ist skaliert um die gesamte Breite des Spiels auszufüllen. Am Schluss setzen wir die `immovable` Eigenschaft auf true. Hätten wir das nicht getan, würde sich der Grund bewegen sobald der Spieler mit ihm kollidiert (mehr davon in dem Physikabschnitt).
+Mittels `game.add.group()` erzeugen wir unser Gruppenobjekt. Wir weisen es einer lokalen Variable `platforms` zu. Jetzt können wir ihr Objekte hinzufügen - als Erstes den Boden. Der ist am Grund des Spiels platziert und verwendet das `ground` Spirte welches wir vorher geladen haben. Der Boden ist skaliert um die gesamte Breite des Spiels auszufüllen. Am Schluss setzen wir die `immovable` Eigenschaft auf true. Hätten wir das nicht getan, würde sich der Grund bewegen sobald der Spieler mit ihm kollidiert (mehr davon in dem Physikabschnitt).
 
 Mit dem Boden an Ort und Stelle erzeugen wir zwei kleinere Platformen zum Draufspringen mit der exakt gleichen Technik wie für den Boden.
 
 ## Bereit machen: Spieler 1
-Erzeuge eine neue lokale Variable genannt `player` und füge folgenden Code der `create` funktion hinzu. Du kannst dies in `part5.html` sehen:
+Erzeuge eine neue lokale Variable genannt `player` und füge folgenden Code der `create` funktion hinzu - du kannst dies in `part5.html` sehen:
 
 ```javascript
     // Der Spieler und seine Einstellungen
@@ -32,13 +32,13 @@ Erzeuge eine neue lokale Variable genannt `player` und füge folgenden Code der 
     player.animations.add('right', [5, 6, 7, 8], 10, true);
 ```
 
-Dies erzeugt ein neues Sprite namens `player`, positioniert an der Position 32 x 150 Pixel vom Grund des Spiels gesehen aus. Wir weisen Phaser an das `dude` Asset zu verwenden welches wir vorher schon geladen haben. Wenn du zurückschielst auf die `preload` Funktion wirst du erkennen, dass wir `dude` als Spritesheet geladen haben und nicht als Bild. Das haben wir deshalb gemacht weil es Animationsframes enthält. Das vollständige Spritesheet sieht so aus:
+Dies erzeugt ein neues Sprite namens `player` und positioniert es an der Position 32 x 150 Pixel vom Grund des Spiels gesehen aus. Wir weisen Phaser an das `dude` Asset zu verwenden welches wir bereits geladen haben. Wenn du zurückblickst auf die `preload` Funktion wirst du erkennen, dass wir `dude` als Spritesheet geladen haben und nicht als Bild; das haben wir deshalb gemacht weil es Animationsframes enthält. Das vollständige Spritesheet sieht so aus:
 
 ![Player][img_player_spritesheet]
 
 Du siehst das es in Summe 9 Frames hat, 4 Frames für laufen rechts, 1 Frame direkt in die Kamera blickend und 4 Frames für nach links laufen. Hinweis: Phaser unterstützt das Spiegeln von Sprites und so kann man sich einige Animationsframes sparen, aber in diesem Tutorial werden wir es richtig 'Old School' machen.
 
-Wir definieren zwei Animationen genannt `left` und `right`. Die `left` Animation verwendet Frames 0, 1, 2 und 3 und läuft mit 10 Frames pro Sekunde. Der `true` Parameter sagt unserer Animation, dass es in einer Schleife ausgeführt werden soll (loop). Das ist unsere Standard-Lauf-Animtation und wir wiederholen das Ganze auch in der entgegengesetzten Richtung. Vor den Animationen haben wir dem Spieler auch ein paar Physikeigenschaften zugewiesen.
+Wir definieren zwei Animationen genannt `left` und `right`. Die `left` Animation verwendet Frames 0, 1, 2 und 3 und läuft mit 10 Frames pro Sekunde. Der `true` Parameter sagt unserer Animation, dass sie in einer Schleife ausgeführt werden soll (loop). Danach wiederholen das Ganze auch in der entgegengesetzten Richtung um eine Laufanimation nach `rechts` zu erzeugen. Vor den Animationen haben wir dem Spieler auch ein paar Physikeigenschaften zugewiesen (bounce, gravity, collideWorldBounds) und die Physik für ihn aktiviert (game.physics.arcade.enable(player)).
 
 [twitter_me]: https://twitter.com/denisenepraunig
 [org_tutorial]: http://phaser.io/tutorials/making-your-first-phaser-game
