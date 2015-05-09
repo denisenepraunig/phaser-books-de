@@ -2,11 +2,11 @@
 
 > Dieses Tutorial wurde aus dem Englischen von Denise Nepraunig [@denisenepraunig][twitter_me] übersetzt. Das [originale Tutorial][org_tutorial] stammt von [Alvin Ourrad and Richard Davey][authors] und ist vom 7. Dezember 2013 [@photonstorm][authors]
 
-Unter der Haube erzeugt `game.add.sprite` ein neues Phaser.Sprite Objekt und fügt dieses Sprite der `Spielewelt` hinzu. Das ist die Welt wo alle deine Objekte existieren, und kann mit der Stage in ActionScript3 vergleichen werden.
+Unter der Haube erzeugt `game.add.sprite` ein neues Phaser.Sprite-Objekt und fügt dieses Sprite der `Spielewelt` hinzu. Dies ist die Welt wo alle deine Objekte existieren und kann mit der Stage in ActionScript3 vergleichen werden.
 
-Hinweise: Die Spielewelt had keine fixe Größe und dehnt sich unendlich aus in alle Richtungen und `0, 0` ist ihr Mittelpunkt. Der Einfachheit halber platziert Phaser `0, 0` in der linken, oberen Ecke deines Spieles für dich, aber wenn du die eingebaunte Kamera verwendest, kannst du dich in der Welt bewegen wie du es brauchst.
+Hinweise: Die Spielewelt had keine fixe Größe und dehnt sich unendlich aus in alle Richtungen und `0, 0` ist ihr Mittelpunkt. Der Einfachheit halber platziert Phaser `0, 0` in der linken, oberen Ecke deines Spieles für dich, aber wenn du die eingebaunte Kamera verwendest, kannst du dich in der Welt frei bewegen - so wie du es brauchst.
 
-Auf die Welt-Klasse kann mittels `game.world` zugegriffen werden und sie enthält vielen nützliche Funktionen und Eigenschaften welche dir helfen die Objekte in deiner Welt zu verteilen. Das sind einfache Eigenschaften wie `game.world.height`, aber es gibt auf einige fortgeschrittenere welche wir in einem anderen Tutorial verwenden werden.
+Auf die Welt-Klasse kann mittels `game.world` zugegriffen werden und sie enthält vielen nützliche Funktionen und Eigenschaften - sie werden dir helfen die Objekte in deiner Welt zu verteilen. Es gibt einfache Eigenschaften wie `game.world.height`, aber es gibt auf einige fortgeschrittenere Dinge welche wir in einem anderen Tutorial verwenden werden.
 
 Lass uns fürs Erste die Szene mit Hintergrund und Platformen aufbauen. Hier ist die aktualisierte `create` Funktion:
 
@@ -15,7 +15,7 @@ var platforms;
 
 function create() {
 
-    //  Wir benötigen ein Physik-System, deshalb lass uns Arcade Physik aktivieren
+    //  Wir benötigen ein Physik-System, deshalb lass uns Arcade-Physik aktivieren
     game.physics.startSystem(Phaser.Physics.ARCADE);
 
     //  Ein einfacher Hintergrund für unser Spiel
@@ -33,13 +33,11 @@ function create() {
     //  Saklieren um der Breite des Spiels zu entsprechen (das originale Sprite hat eine Größe von 400 x 32)
     ground.scale.setTo(2, 2);
 
-    //  Das stoppt es vom Runterfallen wenn du darauf springst
+    //  Das stoppt den Bodem vom Runterfallen wenn du darauf springst
     ground.body.immovable = true;
 
     //  Lass uns die Platformen erzeugen
     var ledge = platforms.create(400, 400, 'ground');
-
-    ledge.body.immovable = true;
 
     ledge = platforms.create(-150, 250, 'ground');
 
@@ -48,14 +46,14 @@ function create() {
 }
 ```
 
-Wenn du das ausführst, du findest das in `part4.html` in der Tutorial Zip-Datei, solltest du eine Szene vorfinden welche uns schon mehr an ein Spiel erinnert:
+Wenn du das ausführst - du findest das in `part4.html` in der Tutorial Zip-Datei - solltest du eine Szene vorfinden welche uns schon mehr an ein Spiel erinnert:
 
-![Platformen][img_game]
+![Platformen][img_game_platform]
 
-Der erste Teil ist der gleiche Teil wie wir im Sternen-Sprite zuvor hatten, nur das wir den Schlüssel zu `sky` geändert haben und nun unseren Himmel Hintergrund stattdessen anzeigen. Das ist eine 800 x 600 PNG-Datei die den ganzen Spieleschirm ausfüllt.
+Der erste Teil ist der gleiche Teil wie wir im Sternen-Sprite zuvor hatten, nur das wir den Schlüssel zu `sky` geändert haben und nun unseren Himmel-Hintergrund stattdessen anzeigen. Das ist eine 800 x 600 PNG-Datei die den ganzen Spieleschirm ausfüllt.
 
 [twitter_me]: https://twitter.com/denisenepraunig
 [org_tutorial]: http://phaser.io/tutorials/making-your-first-phaser-game
 [authors]: https://twitter.com/photonstorm 
 
-[img_game]: http://phaser.io/content/tutorials/making-your-first-phaser-game/part4.png
+[img_game_platform]: http://phaser.io/content/tutorials/making-your-first-phaser-game/part4.png
